@@ -1,0 +1,4 @@
+package com.example.due.createnote;
+
+public class AppDatabase {
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Back Button -->
+    <TextView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="#6200EE"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Save Button -->
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="#6200EE"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Light Bulb Icon -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="24dp"
+        android:src="@android:drawable/ic_menu_help"
+        android:tint="#6200EE" />
+
+    <!-- Title -->
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon"
+        android:layout_alignTop="@id/icon"
+        android:layout_marginStart="8dp"
+        android:text="NEW PRODUCT IDEAS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="@null"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <!-- Note Content -->
+    <EditText
+        android:id="@+id/noteContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_marginTop="16dp"
+        android:text="Create a mobile app UI Kit that provide a basic notes functionality but with some improvement.\n\nThere will be a choice to select what kind of notes that user needed, so the experience while taking notes can be unique based on the needs."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:minLines="5" />
+
+    <!-- Reminder -->
+    <TextView
+        android:id="@+id/reminderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteContent"
+        android:layout_marginTop="24dp"
+        android:text="Reminder set 15/07/2021, 18:30"
+        android:textSize="14sp"
+        android:textColor="#6200EE" />
+
+    <!-- Priority Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reminderText"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/importantButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="Important"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/topPriorityButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Priority"
+            android:textSize="14sp"
+            android:background="@drawable/button_background"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/thisWeekButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Should be Done This Week"
+            android:textSize="14sp"
+            android:background="@drawable/button_background" />
+    </LinearLayout>
+
+    <!-- Bottom Bar (Last Edited + Buttons) -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Last Edited -->
+        <TextView
+            android:id="@+id/lastEdited"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last edited on 20:12"
+            android:textSize="12sp"
+            android:textColor="#888888" />
+
+        <!-- Bottom Right Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="8dp"
+                app:tint="#888888" />
+
+            <ImageButton
+                android:id="@+id/saveBottomButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_save"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="8dp"
+                app:tint="#888888" />
+
+            <ImageButton android:id="@+id/moreButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_more"
+                android:background="@android:color/transparent"
+                android:tint="#888888"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
